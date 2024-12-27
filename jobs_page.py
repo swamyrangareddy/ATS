@@ -64,7 +64,7 @@ def jobs_page(job_requirements):
 
                 # Save the updated job details back to the CSV file
                 job_requirements.to_csv(
-                    "D:/Einsteinium Labs/Projects/ATS/ATS_V1/data/job_requirements.csv",
+                    "s3://my-s3-dashboard/job_requirements.csv",
                     index=False,
                 )
 
@@ -103,7 +103,7 @@ def jobs_page(job_requirements):
 
                 # Save the updated job details back to the CSV file
                 job_requirements.to_csv(
-                    "D:/Einsteinium Labs/Projects/ATS/ATS_V1/data/job_requirements.csv",
+                    "s3://my-s3-dashboard/job_requirements.csv",
                     index=False,
                 )
 
@@ -129,7 +129,7 @@ def jobs_page(job_requirements):
 
                 # Save the updated job details back to the CSV file
                 job_requirements.to_csv(
-                    "D:/Einsteinium Labs/Projects/ATS/ATS_V1/data/job_requirements.csv",
+                    "s3://my-s3-dashboard/job_requirements.csv",
                     index=False,
                 )
 
@@ -161,7 +161,7 @@ def main():
     if "updated" not in st.session_state:
         st.session_state.updated = False
 
-    filepath = "D:/Einsteinium Labs/Projects/ATS_V1/data/D:\Einsteinium Labs\Projects\ATS\ATS_V1\data\job_requirements.csv"
+    filepath = "s3://my-s3-dashboard/job_requirements.csv"
     job_detail = load_job_data(filepath)
 
     # Refresh functionality (optional)
